@@ -51,6 +51,10 @@ function createChatBox(html, classes) {
 
 function handlechatResponse(message) {
   user.message = message;
+  if(user.message=="")
+  {
+    return
+  }
   let html = `<img src="assests/user-logo.png" alt="" id="userImage" width="10%">
             <div class="user-chat-area">
                 ${user.message}
